@@ -65,17 +65,33 @@
       background: linear-gradient(90deg,var(--akem),var(--akem2));
     }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .logo { width: 180px; height: auto; margin-bottom: .5rem; filter: drop-shadow(0 8px 24px rgba(30,227,207,.25)); }
+    .watermark {
+      position: fixed; right: 22px; bottom: 16px; width: 86px; opacity: .22; pointer-events: none; z-index: 3;
+    }
+    .hero-shot {
+      margin-top: .8rem;
+      width: 72%;
+      border: 1px solid #2b3a5f;
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.45);
+    }
+    .section-title { display:flex; align-items:center; gap:.55rem; }
+    .section-title img { width: 24px; opacity:.9; }
   </style>
 </head>
 <body>
+  <img class="watermark" src="assets/akem-logo.svg" alt="Akem" />
   <div class="reveal">
     <div class="slides">
 
       <section>
+        <img class="logo" src="assets/akem-logo.svg" alt="Akem logo" />
         <div class="tag">Confidential • Investor Deck</div>
         <h1>Akem <span class="accent">Knows Every Move™</span></h1>
         <div class="brandline"></div>
         <p>Agentic finance infrastructure for humans and AI agents.</p>
+        <img class="hero-shot" src="assets/akem-dashboard.png" alt="Akem dashboard" />
         <p class="muted">2026</p>
       </section>
 
