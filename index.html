@@ -5,16 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Akem Investor Pitch</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
   <style>
-    :root { --akem:#22d3ee; --muted:#9ca3af; }
-    .reveal h1,.reveal h2,.reveal h3 { text-transform:none; letter-spacing:0; }
-    .reveal .accent { color: var(--akem); }
-    .reveal .small { font-size: .65em; color: var(--muted); }
-    .reveal ul { display:block; }
-    .pill { display:inline-block; padding:.18em .6em; border:1px solid #334155; border-radius:999px; font-size:.45em; margin-right:.3em; }
-    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; align-items:start; }
-    .kpi { font-size:1.8em; color:var(--akem); font-weight:700; }
+    :root {
+      --bg:#040816;
+      --bg2:#0a1122;
+      --card:#0d162d;
+      --line:#1f2a44;
+      --text:#eaf1ff;
+      --muted:#93a4c7;
+      --akem:#1ee3cf;
+      --akem2:#4cc9ff;
+      --hot:#7c5cff;
+    }
+
+    html, body { background: radial-gradient(1200px 700px at 80% -10%, #122246 0%, var(--bg) 45%), var(--bg); }
+    .reveal { color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    .reveal .slides { text-align: left; }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform:none; letter-spacing:-0.02em; margin-bottom: .35em; }
+    .reveal h1 { font-size: 2.4em; }
+    .reveal h2 { font-size: 1.6em; }
+    .reveal h3 { font-size: 1.05em; color: #d9e7ff; }
+    .reveal p, .reveal li { color: #d7e3fb; }
+    .reveal ul { display:block; margin-top:.45em; }
+    .reveal li { margin-bottom:.4em; }
+    .muted { color: var(--muted) !important; }
+    .accent { color: var(--akem); }
+    .accent2 { color: var(--akem2); }
+    .frame {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(28,46,87,.45), rgba(14,22,41,.75));
+      border-radius: 18px;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset, 0 12px 30px rgba(0,0,0,.35);
+    }
+    .pill {
+      display:inline-block;
+      padding:.25em .65em;
+      border:1px solid #2b3a5f;
+      border-radius:999px;
+      font-size:.45em;
+      color:#dff4ff;
+      background: rgba(26,40,74,.55);
+      margin-right:.3em;
+    }
+    .row { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .kpi { font-size:2em; font-weight:700; line-height:1; color: var(--akem); }
+    .tag { font-size:.42em; color:#b9c8e8; text-transform:uppercase; letter-spacing:.16em; }
+    .brandline {
+      height: 4px; width: 210px;
+      background: linear-gradient(90deg,var(--akem),var(--akem2),var(--hot));
+      border-radius: 999px; margin: .55rem 0 .85rem;
+    }
+    .progress {
+      width:100%; height:18px; border-radius:999px; border:1px solid #2b3a5f; overflow:hidden;
+      background: #121d36;
+    }
+    .progress > span {
+      display:block; height:100%; width:50%;
+      background: linear-gradient(90deg,var(--akem),var(--akem2));
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
   </style>
 </head>
 <body>
@@ -22,72 +72,60 @@
     <div class="slides">
 
       <section>
-        <h1>Akem</h1>
-        <h3 class="accent">Akem Knows Every Move™</h3>
-        <p>Agentic Finance Infrastructure for Humans + AI Agents</p>
-        <p class="small">Confidential Investor Presentation • 2026</p>
+        <div class="tag">Confidential • Investor Deck</div>
+        <h1>Akem <span class="accent">Knows Every Move™</span></h1>
+        <div class="brandline"></div>
+        <p>Agentic finance infrastructure for humans and AI agents.</p>
+        <p class="muted">2026</p>
       </section>
 
       <section>
         <h2>The Problem</h2>
-        <ul>
-          <li>Markets move faster than human research workflows.</li>
-          <li>Earnings + filings + options flow + guidance changes are fragmented across tools.</li>
-          <li>Legacy workflow is reactive; alpha now belongs to always-on systems.</li>
-        </ul>
-        <p class="accent">Research latency is now a P&L problem.</p>
+        <div class="frame">
+          <ul>
+            <li>Markets move faster than human research cycles.</li>
+            <li>Earnings, filings, guidance, and options signals live across fragmented tools.</li>
+            <li>By the time insight is found, the move is often already priced in.</li>
+          </ul>
+        </div>
+        <p class="accent">Manual workflow = alpha decay.</p>
       </section>
 
       <section>
-        <h2>The Solution</h2>
-        <p><strong>Akem is an autonomous analyst army.</strong></p>
-        <ul>
-          <li>24/7 agents monitor earnings calls, 10-Ks, language shifts, and market structure.</li>
-          <li>Turns raw signals into actionable pre-market intelligence.</li>
-          <li>Built for direct human decisions and AI-agent-native workflows.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Product Wedges</h2>
-        <div class="grid2">
-          <div>
+        <h2>The Akem System</h2>
+        <div class="row">
+          <div class="frame">
             <h3>For Humans</h3>
             <ul>
               <li>Earnings intelligence dashboard</li>
-              <li>Real-time alerts & watchlists</li>
+              <li>Real-time market + risk alerts</li>
               <li>Forensic accounting automation</li>
             </ul>
           </div>
-          <div>
+          <div class="frame">
             <h3>For Agents</h3>
             <ul>
-              <li>One-line install: <code>earnings.akem.com/skill.md</code></li>
-              <li>Cited pre-earnings briefs</li>
-              <li>Scenario analysis + post-mortems</li>
+              <li>One-line install</li>
+              <li class="mono">earnings.akem.com/skill.md</li>
+              <li>Cited briefs + scenarios + post-mortems</li>
             </ul>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Why We Win</h2>
-        <ul>
-          <li>Domain-specific earnings intelligence stack (not generic LLM wrapper).</li>
-          <li>Structured workflows: GAAP/non-GAAP, tone shifts, guidance quality, anomaly flags.</li>
-          <li>Dual distribution: B2C traders + B2B agent/API integration.</li>
-          <li>Compounding moat from prediction/post-mortem feedback loops.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Why Now</h2>
-        <ul>
-          <li>AI agents are entering core investment workflows now.</li>
-          <li>Data velocity is exploding during each earnings cycle.</li>
-          <li>Buy-side demand is shifting from dashboards to autonomous systems.</li>
-        </ul>
-        <p class="accent">From screen-time tools to machine-time alpha.</p>
+        <h2>Proof of Engine</h2>
+        <div class="row">
+          <div class="frame">
+            <div class="kpi">4,200+</div>
+            <p class="muted">earnings calls analyzed per quarter</p>
+          </div>
+          <div class="frame">
+            <div class="kpi">24/7</div>
+            <p class="muted">autonomous monitoring coverage</p>
+          </div>
+        </div>
+        <p class="muted">Add internal KPIs here: MRR, growth rate, paid conversion, retention.</p>
       </section>
 
       <section>
@@ -98,55 +136,70 @@
           <span class="pill">$199/mo Team</span>
           <span class="pill">Enterprise</span>
         </p>
-        <ul>
-          <li>Land via free/pro plans, expand into team + enterprise.</li>
-          <li>Enterprise adds dedicated infra, unlimited API, custom model training, SLA.</li>
-          <li>Strong expansion potential through API and workflow integrations.</li>
-        </ul>
+        <div class="frame">
+          <ul>
+            <li>Land with self-serve, expand with team + enterprise workflow integration.</li>
+            <li>Enterprise: dedicated infra, unlimited API, custom model training, SLA.</li>
+            <li>Clear upsell path as customers operationalize agent-driven research.</li>
+          </ul>
+        </div>
       </section>
 
       <section>
-        <h2>Traction Signals</h2>
-        <div class="grid2">
-          <div>
-            <p class="kpi">4,200+</p>
-            <p>earnings calls analyzed per quarter</p>
+        <h2>Why Now</h2>
+        <div class="frame">
+          <ul>
+            <li>AI agents are becoming standard in investment workflows.</li>
+            <li>Earnings-season data velocity keeps compounding.</li>
+            <li>Customers want autonomous intelligence, not static dashboards.</li>
+          </ul>
+        </div>
+        <p class="accent2">The shift is from screen-time tools to machine-time alpha.</p>
+      </section>
+
+      <section>
+        <h2>Pre-Seed Round</h2>
+        <div class="frame">
+          <p><strong>Raise:</strong> <span class="accent">$3.0M</span> on a <strong>capped SAFE</strong></p>
+          <p><strong>Post-money valuation cap:</strong> <span class="accent2">$15.0M</span></p>
+          <p><strong>Already allocated:</strong> <span class="accent">$1.5M</span> (50%)</p>
+          <div class="progress" aria-label="allocation progress"><span></span></div>
+          <p class="muted" style="margin-top:.45rem;">Remaining allocation: <strong>$1.5M</strong></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Use of Funds (18 Months)</h2>
+        <div class="row">
+          <div class="frame">
+            <h3>Product + Data (55%)</h3>
+            <ul>
+              <li>Model quality + evaluation loops</li>
+              <li>Data ingest + reliability</li>
+              <li>Enterprise controls + API depth</li>
+            </ul>
           </div>
-          <div>
-            <p class="kpi">24/7</p>
-            <p>autonomous monitoring</p>
+          <div class="frame">
+            <h3>GTM + Ops (45%)</h3>
+            <ul>
+              <li>Distribution and sales motion</li>
+              <li>Partnerships + ecosystem growth</li>
+              <li>Customer success + support</li>
+            </ul>
           </div>
         </div>
-        <p class="small">Add your internal metrics here: MRR, growth, retention, conversion, WAU.</p>
       </section>
 
       <section>
-        <h2>Go-To-Market</h2>
-        <ul>
-          <li>Signal-led growth around earnings season moments.</li>
-          <li>Distribution via analyst creators and trading communities.</li>
-          <li>Agent ecosystem wedge: install once, recurring usage.</li>
-          <li>Enterprise motion: API-first pilots → platform expansion.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>The Vision</h2>
-        <p><strong>Build the Bloomberg for the agentic era.</strong></p>
-        <ul>
-          <li>Always-on market intelligence</li>
-          <li>Actionable, cited, and explainable outputs</li>
-          <li>For humans and machines making capital decisions</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>The Ask</h2>
-        <ul>
-          <li><strong>Raise:</strong> $X Seed</li>
-          <li><strong>Use of funds:</strong> Product, data infra, GTM, enterprise readiness</li>
-          <li><strong>18-month goals:</strong> Revenue scale, user growth, enterprise logos, model-quality leadership</li>
-        </ul>
+        <h2>Vision</h2>
+        <div class="frame">
+          <p><strong>Build the Bloomberg for the agentic era.</strong></p>
+          <ul>
+            <li>Always-on, explainable market intelligence</li>
+            <li>Native for both human and machine decision-makers</li>
+            <li>From signal detection to portfolio action in one loop</li>
+          </ul>
+        </div>
         <p class="accent">Stop watching. Start knowing.</p>
       </section>
 
@@ -155,7 +208,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <script>
-    Reveal.initialize({ hash: true, slideNumber: true, transition: 'fade' });
+    Reveal.initialize({ hash: true, slideNumber: true, transition: 'fade', backgroundTransition: 'fade' });
   </script>
 </body>
 </html>
